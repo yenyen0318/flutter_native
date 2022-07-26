@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -110,15 +111,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
-                          children: [
+                        Row(children: [
                           Icon(
                             Icons.battery_full,
                             color: Colors.grey,
                           ),
                           Text(_batteryLevel),
                         ]),
-                        
                         ElevatedButton(
                           onPressed: _getBatteryLevel,
                           child: const Text('電池狀態'),
